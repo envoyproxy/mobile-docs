@@ -85,9 +85,9 @@ const _displayItem = (item, searchTerms, highlightTerms) => {
   let linkEl = listItem.appendChild(document.createElement("a"));
   linkEl.href = linkUrl + anchor;
   linkEl.dataset.score = score;
-  linkEl.innerHTML = title;
+  linkEl.innerText = title;
   if (descr) {
-    listItem.appendChild(document.createElement("span")).innerHTML =
+    listItem.appendChild(document.createElement("span")).innerText =
       " (" + descr + ")";
     // highlight search terms in the description
     if (SPHINX_HIGHLIGHT_ENABLED)  // set in sphinx_highlight.js
